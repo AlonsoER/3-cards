@@ -1,0 +1,161 @@
+:root {
+  /* Colors */
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+
+  /* Paragraphs */
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+
+  /* Background, Headings, Buttons */
+  --veryLightGray: hsl(0, 0%, 95%);
+
+  /* Fonts */
+  --lexendDeca: "Lexend Deca", sans-serif;
+  --bigShouldersDisplay: "Big Shoulders Display", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* Globals */
+.main {
+  width: 100%;
+  height: 100%;
+  margin: 1rem 0;
+}
+
+.contenedor {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .main__contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main__contenido--card {
+  padding: 5rem;
+}
+
+.main__contenido--Orangecard {
+  background-color: var(--brightOrange);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.main__contenido--Cyancard {
+  background-color: var(--darkCyan);
+}
+
+.main__contenido--DarkCyancard {
+  background-color: var(--veryDarkCyan);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .main__contenido--Orangecard,
+  .main__contenido--DarkCyancard {
+    border-radius: 0;
+  }
+  .main__contenido--Orangecard {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .main__contenido--DarkCyancard {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.main__contenido--titulo {
+  color: var(--veryLightGray);
+  font-family: var(--bigShouldersDisplay);
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.main__contenido--descripcion {
+  color: var(--transparentWhite);
+  line-height: 2;
+  margin: 3rem 0;
+}
+
+.main__contenido--button {
+  background-color: var(--veryLightGray);
+  border: none;
+  font-family: var(--lexendDeca);
+  padding: 2rem;
+  width: 15rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.main__contenido--Orangecard .main__contenido--button {
+  color: var(--brightOrange);
+}
+
+.main__contenido--Cyancard .main__contenido--button {
+  color: var(--darkCyan);
+}
+
+.main__contenido--DarkCyancard .main__contenido--button {
+  color: var(--veryDarkCyan);
+}
+
+.main__contenido--button:hover {
+  border: 3px solid var(--transparentWhite);
+  color: var(--transparentWhite);
+  font-weight: bold;
+}
+
+.main__contenido--Orangecard .main__contenido--button:hover {
+  background-color: var(--brightOrange);
+}
+
+.main__contenido--Cyancard .main__contenido--button:hover {
+  background-color: var(--darkCyan);
+}
+
+.main__contenido--DarkCyancard .main__contenido--button:hover {
+  background-color: var(--veryDarkCyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
