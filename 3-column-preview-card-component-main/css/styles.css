@@ -46,7 +46,7 @@ body {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .main {
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .main__contenido {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -83,7 +83,7 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .main__contenido--Orangecard,
   .main__contenido--DarkCyancard {
     border-radius: 0;
